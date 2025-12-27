@@ -1,0 +1,24 @@
+<div class="card">
+  <h3>Add Student Info</h3>
+  <input type="text" placeholder="Student Name" [value]="student_name"
+    (input)="student_name = $any($event.target).value">
+
+  <input type="email" placeholder="Email" [value]="email"
+    (input)="email = $any($event.target).value">
+
+  <input type="tel" placeholder="Contact Number" [value]="contact"
+    (input)="contact = $any($event.target).value" >
+
+  <input type="number" placeholder="Study Hours" [value]="study_hours" (input)="study_hours = $any($event.target).value">
+  <input type="number" placeholder="Attendance %" [value]="attendance" (input)="attendance = $any($event.target).value">
+  <input type="number" placeholder="Assignment Marks" [value]="assignment_marks" (input)="assignment_marks = $any($event.target).value">
+  <button (click)="predict()" >Predict</button>
+</div>
+
+<div class="card p-3 mt-3">
+  <h4>Send Marks History</h4>
+  <input type="email" [(ngModel)]="email" placeholder="Student Email" class="form-control mb-2">
+  <button class="btn" (click)="sendMarksEmail()">Send Email</button>
+</div>
+
+
